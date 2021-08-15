@@ -1,69 +1,184 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap');
+
+*{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
 body{
+    box-sizing: border-box;
     margin: 0;
 }
 
 header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     position: fixed;
-    padding: 10px;
+    top: 0;
+    min-height: 75px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #eee;
+    flex-direction: column;
+    width: 100vw;
 }
 
 #header-img{
+    max-width: 300px;
+    margin-top: 1rem;
+}
+
+#nav-bar ul > li{
+    text-align: center;
+    margin-left: -2rem;
+}
+
+#greeting{
+    margin-top: 150px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
-li{
-    list-style: none;
-}
-
-.nav-link{
-    text-decoration: none;
-}
-
-.greeting{
-     text-align: center;
-}
-
-.pitch{
-    font-size: 2rem;
-    font-weight: 900;
-}
-
-#email{
-    width: 15rem;
-    padding: 1rem;
-    border-radius: 2rem;
-    border: none;
-    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.1);
-}
-
-#submit{
-    display: block;
-    margin: 1rem auto;
-    background-color: yellow;
-    border: none;
-    padding: 1rem;
-    font-size: 1rem;
-    border-radius: 2rem;
-    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.1);
-    font-weight: 800;
-}
-
-main{
-    max-width: 600px;
-}
-
-#features{
+#form{
     display: flex;
     flex-direction: column;
 }
 
+#email{
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    box-shadow: 0 0 20px 1px rgba(141, 141, 141, 0.2);
+    border-radius: 3rem;
+}
+
+#submit{
+    margin-top: 1rem;
+    width: 10rem;
+    padding: 1rem;
+    border-radius: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 900;
+    font-size: 1rem;
+}
+
+#submit, button{
+    border: none;
+    background-color: rgb(255, 230, 0);
+}
+
+main{
+    width: 95vw;
+    margin: auto;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+#features{
+    text-align: center;
+}
 
 #video{
+    display: block;
     width: 100%;
+    max-height: 500px;
+    height: calc(100vw/2);
 }
+
+#pricing{
+    margin: auto;
+}
+
+.plan{
+    border: 1px solid #555;
+    height: 350px;
+    width: 300px;
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.plan-name{
+    margin-top: 0;
+    padding: 1rem;
+    background-color: #eee;
+}
+
+.price{
+    font-weight: 900;
+}
+
+.plan-features{
+    margin-left: -2rem;
+}
+
+.plan-features li{
+    margin: 1rem auto;
+}
+
+.select-btn{
+    margin-top: 1rem;
+    width: 6rem;
+    padding: 1rem;
+    border-radius: 3rem;
+    text-align: center;
+    font-weight: 900;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #eee;
+    text-align: right;
+    padding: 1rem;
+}
+
+.footer-list{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-around;
+}
+
+@media screen and (min-width:650px) {
+    header{
+        flex-direction: row;
+        align-content: center;
+        width: 100vw;
+    }
+
+    #header-img{
+        margin: 0;
+        justify-self: start;
+    }
+
+    #nav-bar > ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 500px;
+        width: 50vw;
+    }
+
+    #pricing{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    main{
+        max-width: 800px;
+    }
+}
+
+
 
 
 
